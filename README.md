@@ -1,7 +1,6 @@
 # pdf2markdown
 
-A tool which can transfer pdf to markdown file. This project is based on [e2m](https://github.com/wisupai/e2m).
-
+A tool which can transfer pdf to markdown file. This project is based on [e2m](https://github.com/wisupai/e2m). The engine is `marker`. It uses local computation. The RAM comsumption is usually more than 5Gb.
 
 
 ## How to use it
