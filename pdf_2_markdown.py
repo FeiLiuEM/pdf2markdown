@@ -2,7 +2,7 @@
 Author: FeiLiu <FeiLiuEM@outlook.com>
 Date: 2024-09-19 02:59:05
 LastEditors: FeiLiu <FeiLiuEM@outlook.com>
-LastEditTime: 2024-09-19 03:29:53
+LastEditTime: 2024-09-19 08:00:20
 Description: 
 
 Copyright (c) 2024 by <FeiLiuEM@outlook.com>, All Rights Reserved. 
@@ -24,7 +24,7 @@ def getFilePathList(path, filetype):
 
 if __name__ == "__main__":
     work_dir = os.getcwd()  # Set the current path as the working directory
-    image_dir = os.path.join(work_dir, "figure")
+    image_dir = os.path.join(work_dir, "figures")
     pdf_dir = os.path.join(work_dir, "pdf")
     md_dir = os.path.join(work_dir, "markdown")
 
@@ -38,6 +38,9 @@ if __name__ == "__main__":
     # Parse the PDF into images
     pdf_data = pdf_parser.parse(pdf_path)
 
+    #os.system(f'mkdir {md_dir}\\figures')
+    os.system(f'mv {image_dir} {md_dir}')
+    os.system(f'mv output.json {md_dir}')
 
     # Save the test markdown
     with open(md_path, "w") as f:
